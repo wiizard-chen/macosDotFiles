@@ -1,0 +1,43 @@
+layout {
+  default_tab_template {
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+    children
+  }
+
+  pane_template name="project_pane" {
+     pane split_direction="Vertical" {
+        pane
+        pane split_direction="horizontal" {
+         pane
+         pane
+        }
+     }
+  }
+
+  tab name="current_project" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle" {
+    pane 
+  }
+
+  tab name="fix_bug" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle" {
+    project_pane 
+  }
+
+  tab name="rebase" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle-rebase" {
+    project_pane 
+  }
+
+  tab name="config" cwd="/Users/admin/.config" {
+     pane split_direction="Vertical" {
+        pane split_direction="horizontal" {
+         pane name="zellij" cwd="zellij"
+         pane name="nvim" cwd="nvim"
+        }
+        pane split_direction="horizontal" {
+         pane name="alacritty" cwd="alacritty"
+         pane name="fish" cwd="fish"
+        }
+     }
+  }
+}

@@ -1,0 +1,156 @@
+# cSpell:words alacritty lfcd
+live_config_reload: true
+
+env:
+  TERM: xterm-256color
+
+font:
+  normal:
+    family: "JetBrainsMonoNL Nerd Font Mono"
+  size: 16
+
+window:
+  # opacity: 0.74
+  opacity: 0.78
+  padding:
+    x: 10
+    y: 4
+  dynamic_padding: false
+  decorations: buttonless
+
+key_bindings:
+  # (Windows, Linux, and BSD only)
+  # Cmd + T, tmux Prefix hex code \x14
+  # C-T g open lazygit
+  # - { key: I, mods: Command, chars: "\x14\x67"}
+  # - { key: N, mods: Command, chars: "\x14\x63" }
+  # - { key: W, mods: Command|Control, chars: "\x14&" }
+  # visual switch tmux
+  # - { key: Semicolon, mods: Command, chars: "\x14w" }
+
+  # zellij shortcut
+  # switch window
+  # - { key: Key1, mods: Command, chars: "\x141" }
+  # - { key: Key2, mods: Command, chars: "\x142" }
+  # - { key: Key3, mods: Command, chars: "\x143" }
+  # - { key: Key4, mods: Command, chars: "\x144" }
+  # - { key: Key5, mods: Command, chars: "\x145" }
+  # - { key: Key6, mods: Command, chars: "\x146" }
+  # - { key: Key7, mods: Command, chars: "\x147" }
+  # - { key: Key8, mods: Command, chars: "\x148" }
+  # - { key: Key9, mods: Command, chars: "\x149" }
+  # open nvim select text
+  - { key: U, mods: Command, chars: "\x14u" }
+  # rename zellij tab name
+  # - { key: R, mods: Command, chars: "\x14r" }
+
+  # switch pane alt - [h,j,k,l]
+  # https://superuser.com/questions/1043596/mac-osx-remove-hide-window-keyboard-shortcut
+  # need to disabled alacrit "hide alacritty shortcut"
+  - { key: H, mods: Command, chars: "\x14h" }
+  - { key: J, mods: Command, chars: "\x14j" }
+  - { key: K, mods: Command, chars: "\x14k" }
+  - { key: L, mods: Command, chars: "\x14l" }
+  # vertical pane
+  - { key: Backslash, mods: Command, chars: "\x14v" }
+  # horizon pane
+  - { key: S, mods: Command, chars: "\x14s" }
+  # delete pane
+  - { key: D, mods: Command, chars: "\x14x" }
+  # fullscreen pane
+  - { key: O, mods: Command, chars: "\x14f" }
+  # new pane
+  # - { key: N, mods: Command, chars: "\x14n" }
+  # float pane
+  - { key: M, mods: Command, chars: "\x14m" }
+  # float toggle pane
+  - { key: E, mods: Command, chars: "\x14e" }
+
+  # nvim shortcut
+  # comment this code
+  - { key: Slash, mods: Command, chars: "gcc" }
+  # select all text
+  - { key: A, mods: Command, chars: "ggVG" }
+  # close nvim buffers
+  - { key: W, mods: Command, chars: " bD" }
+  # - { key: S, mods: Command, chars: "\x1b fs" }
+  # nvim open lazy git
+  - { key: I, mods: Command, chars: ";lg" }
+
+  # disabled the minimize
+  - { key: M, mods: Command|Control, action: Minimize }
+  # hide the window
+  - { key: H, mods: Command|Control, action: Hide }
+
+  # esc: \x1b
+  - { key: Key1, mods: Command, chars: "\x1b 1" }
+  - { key: Key2, mods: Command, chars: "\x1b 2" }
+  - { key: Key3, mods: Command, chars: "\x1b 3" }
+  - { key: Key4, mods: Command, chars: "\x1b 4" }
+  - { key: Key5, mods: Command, chars: "\x1b 5" }
+  - { key: Key6, mods: Command, chars: "\x1b 6" }
+  - { key: Key7, mods: Command, chars: "\x1b 7" }
+  - { key: Key8, mods: Command, chars: "\x1b 8" }
+  - { key: Key9, mods: Command, chars: "\x1b 9" }
+
+  - { key: N, mods: Command, chars: "\x1b n" }
+  - { key: F, mods: Command, chars: "\x1b sb" }
+  - { key: P, mods: Command, chars: "\x1b  " }
+  - { key: R, mods: Command, chars: "\x1b sr" }
+
+  # - { key: Key1, mods: Command|Control, chars: "\x141" }
+  # - { key: Key2, mods: Command|Control, chars: "\x142" }
+  # - { key: Key3, mods: Command|Control, chars: "\x143" }
+  # - { key: Key4, mods: Command|Control, chars: "\x144" }
+  # - { key: Key5, mods: Command|Control, chars: "\x145" }
+  # - { key: Key6, mods: Command|Control, chars: "\x146" }
+  # - { key: Key7, mods: Command|Control, chars: "\x147" }
+  # - { key: Key8, mods: Command|Control, chars: "\x148" }
+  # - { key: Key9, mods: Command|Control, chars: "\x149" }
+  # - { key: I,    mods: Command, chars: " gg"}
+
+# import:
+#   - ~/.config/alacritty/rosePine.yml
+
+# rose pine
+colors:
+  primary:
+    background: "0x191724"
+    foreground: "0xe0def4"
+  cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  vi_mode_cursor:
+    text: "0xe0def4"
+    cursor: "0x524f67"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xe0def4"
+    background: "0x403d52"
+  normal:
+    black: "0x26233a"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  bright:
+    black: "0x6e6a86"
+    red: "0xeb6f92"
+    green: "0x31748f"
+    yellow: "0xf6c177"
+    blue: "0x9ccfd8"
+    magenta: "0xc4a7e7"
+    cyan: "0xebbcba"
+    white: "0xe0def4"
+  hints:
+    start:
+      foreground: "#908caa"
+      background: "#1f1d2e"
+    end:
+      foreground: "#6e6a86"
+      background: "#1f1d2e"

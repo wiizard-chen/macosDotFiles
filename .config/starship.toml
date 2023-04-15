@@ -1,0 +1,39 @@
+[character]
+success_symbol = "[](white)"
+error_symbol = "[](red)"
+vicmd_symbol = "[](green)"
+
+[directory]
+style = "blue bold"
+
+[package]
+disabled = true
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true
+
+[aws]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[git_branch]
+disabled = false
+# symbol = "🌱 "
+style = "bold yellow"
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+[git_metrics]
+disabled = true
+
+[git_status]
+disabled = true
