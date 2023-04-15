@@ -1,0 +1,2 @@
+# macosDotFiles
+my private dotfiles
