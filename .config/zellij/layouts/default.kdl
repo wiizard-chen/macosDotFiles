@@ -16,16 +16,16 @@ layout {
      }
   }
 
-  tab name="current_project" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle" {
-    pane 
-  }
-
-  tab name="fix_bug" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle" {
+  tab name="current_project" {
     project_pane 
   }
 
-  tab name="rebase" cwd="/Users/admin/Documents/codes/ghq/code.byted.org/cloud-fe/bytecycle-rebase" {
-    project_pane 
+  tab name="fix_bug" {
+    project_pane
+  }
+
+  tab name="rebase" {
+    project_pane
   }
 
   tab name="config" cwd="/Users/admin/.config" {
