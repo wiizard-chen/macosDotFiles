@@ -173,6 +173,27 @@ config.keys = {
 		mods = "CMD",
 		action = act.SendString("\x1b sr"),
 	},
+
+	{
+		key = "i",
+		mods = "CMD",
+		action = act.SendString(";lg"),
+	},
+	{
+		key = "a",
+		mods = "CMD",
+		action = act.SendString("ggVG"),
+	},
+	{
+		key = "Slash",
+		mods = "CMD",
+		action = act.SendString("gcc"),
+	},
+	{
+		key = "w",
+		mods = "CMD",
+		action = act.SendString(" bD"),
+	},
 }
 -- and finally, return the configuration to wezterm
 return config
