@@ -3,3 +3,4 @@
 # .config/.gitlab
 # .config/clash
 .config/LazyVim
+.config/nvim
