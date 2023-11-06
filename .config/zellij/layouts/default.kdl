@@ -1,22 +1,22 @@
 layout {
   default_tab_template {
+    children
     pane size=1 borderless=true {
         plugin location="zellij:compact-bar"
     }
-    children
   }
 
   pane_template name="project_pane" {
      pane split_direction="Vertical" {
         pane
-        pane split_direction="horizontal" {
-         pane
-         pane
-        }
+        // pane split_direction="horizontal" {
+        //  pane
+        //  pane
+        // }
      }
   }
 
-  tab name="current_project" {
+  tab name="current_project" focus=true {
     project_pane 
   }
 
@@ -28,14 +28,14 @@ layout {
     project_pane
   }
 
-  tab name="config" cwd="/Users/admin/.config" {
+  tab name="config" cwd="~/.config" {
      pane split_direction="Vertical" {
         pane split_direction="horizontal" {
          pane name="zellij" cwd="zellij"
          pane name="nvim" cwd="nvim"
         }
         pane split_direction="horizontal" {
-         pane name="alacritty" cwd="alacritty"
+         pane name="alacritty" cwd="wezterm"
          pane name="fish" cwd="fish"
         }
      }

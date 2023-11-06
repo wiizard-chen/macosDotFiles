@@ -89,10 +89,14 @@ plugins {
 }
 
 
-theme "rose-pine"
+theme "rose-pine-moon"
 
 // default_layout "compact"
 // default_layout "default"
 // default_layout "/$CFG_PATH/zellij/layout.kdl"
 
-scrollback_editor "/usr/local/bin/nvim"
+// scrollback_editor "/usr/local/bin/nvim"
+scrollback_editor "/usr/bin/vim"
+
+copy_command "pbcopy"                     // osx
+

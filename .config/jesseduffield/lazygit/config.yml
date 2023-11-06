@@ -1,3 +1,0 @@
-os:
-  openCommand: 'code --goto -- {{filename}}:{{line}}'
-  editCommand: 'code'
