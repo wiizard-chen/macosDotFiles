@@ -1,0 +1,92 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    # eval (zellij setup --generate-auto-start fish | string collect)
+    # eval (bash $CFG_PATH/fish/functions/zellijList.bash)
+end
+
+set -gx XDG_RUNTIME_DIR /tmp
+
+eval "$(pyenv init --path)"
+
+# alias nvim="$HOME/nvim-macos/bin/nvim"
+# alias vim="$HOME/nvim-macos/bin/nvim"
+
+alias vim="/usr/local/bin/nvim"
+alias v="/usr/local/bin/nvim"
+
+alias zrf="zellij run --"
+
+# disable welcome message
+set -U fish_greeting ""
+
+# theme
+# set -g theme_color_scheme terminal-dark
+# set -g fish_prompt_pwd_dir_length 1
+# set -g theme_display_user yes
+# set -g theme_hide_hostname no
+# set -g theme_hostname no
+
+# theme enhanced
+# set -g fish_color_error yellow
+# set -g fish_color_command "f0f0f0"
+# set -g fish_color_autosuggestion yellow
+
+# Rosé theme
+fish_config theme choose "Rosé Pine Moon"
+
+# set bin path
+set -gx EDITOR nvim
+set -gx PATH bin $PATH
+set -gx PATH ~/bin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
+
+# NodeJS
+set -gx PATH node_modules/.bin $PATH
+
+# set config path (macos)
+set -gx CFG_PATH ~/.config
+
+
+
+# alias
+alias ide='source ~/.config/fish/functions/ide.bash'
+
+# fist pane run start
+# sencond pane run lazy git
+# third pane run ohter
+alias project='source $CFG_PATH/fish/functions/project.bash'
+
+alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
+
+alias lg='lazygit'
+
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+  alias ls "exa"
+end
+
+alias gln='git log --name-only'
+
+# Attaches tmux to the last session; creates a new session if none exists.
+# alias t='tmux attach || tmux new-session'
+# Attaches tmux to a session (example: ta portal)
+# alias ta='tmux attach -t'
+# Creates a new session
+# alias tn='tmux new-session'
+# Lists all ongoing sessions
+# alias tl='tmux list-sessions'
+# kill all server 
+# alias tkill='tmux kill-server'
+
+# clear all message
+alias cl='clear'
+
+# alias python=/usr/local/bin/python3
+# fisher tide theme remove
+# source (dirname (status --current-filename))/conf.d/tide.fish.fish
+
+starship init fish | source
+
+command clear
