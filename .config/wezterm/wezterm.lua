@@ -15,22 +15,29 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = "rose-pine"
 
--- config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+config.font_size = 16.0
 
 config.window_decorations = "RESIZE"
 
 config.enable_tab_bar = false
 
-config.use_ime = false
+config.window_padding = {
+	left = 2,
+	right = 2,
+	top = 0,
+	bottom = 0,
+}
+-- config.use_ime = false
 
 -- macos blur
-config.window_background_opacity = 0.88
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.4
+
+config.macos_window_background_blur = 10
 
 -- - { key: H, mods: Command, chars: "\x14h" }
---
+
 local act = wezterm.action
 
 config.keys = {
@@ -173,7 +180,6 @@ config.keys = {
 		mods = "CMD",
 		action = act.SendString("\x1b sr"),
 	},
-
 	{
 		key = "i",
 		mods = "CMD",
@@ -193,6 +199,27 @@ config.keys = {
 		key = "w",
 		mods = "CMD",
 		action = act.SendString(" bD"),
+	},
+
+	{
+		key = "1",
+		mods = "OPT",
+		action = act.SendString("\x141"),
+	},
+	{
+		key = "2",
+		mods = "OPT",
+		action = act.SendString("\x142"),
+	},
+	{
+		key = "3",
+		mods = "OPT",
+		action = act.SendString("\x143"),
+	},
+	{
+		key = "4",
+		mods = "OPT",
+		action = act.SendString("\x144"),
 	},
 }
 -- and finally, return the configuration to wezterm

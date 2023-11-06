@@ -4,15 +4,23 @@ if status is-interactive
     # eval (bash $CFG_PATH/fish/functions/zellijList.bash)
 end
 
+set -gx XDG_RUNTIME_DIR /tmp
+
 eval "$(pyenv init --path)"
 
 # alias nvim="$HOME/nvim-macos/bin/nvim"
 # alias vim="$HOME/nvim-macos/bin/nvim"
 
-alias vim="/usr/local/bin/nvim"
-alias v="/usr/local/bin/nvim"
+# vim & nvim alias
+# alias vim="/usr/local/bin/nvim"
+alias v="nvim $argv"
+# alias vim="/usr/local/bin/nvim"
+# alias v="/usr/local/bin/nvim"
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
-alias zrf="zellij run --"
 
 # disable welcome message
 set -U fish_greeting ""
@@ -38,6 +46,8 @@ set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
+set -gx PATH ~/.bun/bin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
@@ -45,24 +55,45 @@ set -gx PATH node_modules/.bin $PATH
 # set config path (macos)
 set -gx CFG_PATH ~/.config
 
+# nvm
+# set -x PATH (brew --prefix nvm)/bin $PATH
+# source (brew --prefix nvm)/nvm.fish
+# pyenv
+set -x PATH (pyenv root)/shims $PATH
 
 
-# alias
-alias ide='source ~/.config/fish/functions/ide.bash'
+
 
 # fist pane run start
 # sencond pane run lazy git
 # third pane run ohter
-alias project='source $CFG_PATH/fish/functions/project.bash'
 
+# alias ide='source ~/.config/fish/functions/ide.bash'
+# alias project='source $CFG_PATH/fish/functions/project.bash'
+
+# alias
+
+# open my zellij layout
 alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
+
+# close all zellij session
+alias za="zellij ka -y"
+
+# run zellij command
+alias zrf="zellij run --"
+
+alias zrs="zellij run --direction down --"
+
+# restart zellij layout
+alias zr="za ; zl"
 
 alias lg='lazygit'
 
+
 if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
-  alias ls "exa"
+    alias ll "exa -l -g --icons"
+    alias lla "ll -a"
+    alias ls exa
 end
 
 alias gln='git log --name-only'
@@ -88,3 +119,11 @@ alias cl='clear'
 starship init fish | source
 
 command clear
+#
+# set --export BUN_INSTALL "$HOME/.bun"
+# set --export PATH $BUN_INSTALL/bin $PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/wiizard/Downloads/google-cloud-sdk/path.fish.inc' ]
+    . '/Users/wiizard/Downloads/google-cloud-sdk/path.fish.inc'
+end

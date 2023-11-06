@@ -11,6 +11,7 @@ fish_color_param ea9a97
 fish_color_comment 908caa
 # fish_color_match --background=brblue
 fish_color_selection --reverse
+# fish_color_selection ffffff
 # fish_color_history_current --bold
 fish_color_operator e0def4
 fish_color_escape 3e8fb0
