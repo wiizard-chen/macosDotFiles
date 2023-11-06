@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # get absolute path
-SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
+SCRIPT_PATH=$(pwd)
 echo "当前脚本文件的绝对路径：$SCRIPT_PATH"
 
 # get config path
