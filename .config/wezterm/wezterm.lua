@@ -34,7 +34,7 @@ config.window_padding = {
 -- macos blur
 config.window_background_opacity = 0.4
 
-config.macos_window_background_blur = 10
+-- config.macos_window_background_blur = 10
 
 -- - { key: H, mods: Command, chars: "\x14h" }
 
@@ -200,7 +200,13 @@ config.keys = {
 		mods = "CMD",
 		action = act.SendString(" bD"),
 	},
+	{
+		key = "b",
+		mods = "CMD",
+		action = act.SendString(" e"),
+	},
 
+	-- zellij tab switch
 	{
 		key = "1",
 		mods = "OPT",
@@ -220,6 +226,11 @@ config.keys = {
 		key = "4",
 		mods = "OPT",
 		action = act.SendString("\x144"),
+	},
+	{
+		key = "5",
+		mods = "OPT",
+		action = act.SendString("\x145"),
 	},
 }
 -- and finally, return the configuration to wezterm
