@@ -3,5 +3,5 @@
 # .config/.gitlab
 # .config/clash
 .config/LazyVim
-.config/nvim
 .config/clash
+.DS_Store
