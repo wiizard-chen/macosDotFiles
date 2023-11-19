@@ -4,6 +4,9 @@ if status is-interactive
     # eval (bash $CFG_PATH/fish/functions/zellijList.bash)
 end
 
+# http_proxy set
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+
 set -gx XDG_RUNTIME_DIR /tmp
 
 eval "$(pyenv init --path)"
@@ -77,7 +80,7 @@ set -x PATH (pyenv root)/shims $PATH
 alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
 
 # close all zellij session
-alias za="zellij ka -y"
+alias za="zellij ka -y; zellij delete-all-sessions -y"
 
 # run zellij command
 alias zrf="zellij run --"
