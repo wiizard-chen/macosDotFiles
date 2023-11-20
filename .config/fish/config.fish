@@ -42,6 +42,7 @@ set -U fish_greeting ""
 
 # Rosé theme
 fish_config theme choose "Rosé Pine Moon"
+# fish_config theme choose "Rosé Pine Moon"
 
 # set bin path
 set -gx EDITOR nvim
