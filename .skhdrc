@@ -29,12 +29,10 @@ shift + alt + ctrl - l : yabai -m window --warp east
 # rotate tree
 alt - r : yabai -m space --rotate 90
 
-# alt - d : yabai -m window --resize abs:1024:800
 
 # toggle window fullscreen zoom
 alt - o : yabai -m window --toggle zoom-fullscreen
 
-# alt - s : yabai -m window --toggle 
 alt - s : yabai -m window --toggle sticky;\
           yabai -m window --toggle topmost;\
           yabai -m window --toggle pip
@@ -43,7 +41,6 @@ alt - s : yabai -m window --toggle sticky;\
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
-# alt - t : ~/.config/yabai/toggle-window-floating-tiling.sh
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 20:20:1:1:18:18
 
