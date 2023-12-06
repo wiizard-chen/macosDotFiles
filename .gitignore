@@ -6,3 +6,5 @@
 .config/clash
 .DS_Store
 .config/fish/fish_variables
+.config/karabiner/automatic_backups
+.config/github-copilot

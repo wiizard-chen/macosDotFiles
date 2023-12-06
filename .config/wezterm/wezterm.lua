@@ -32,9 +32,9 @@ config.window_padding = {
 -- config.use_ime = false
 
 -- macos blur
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.8
 
-config.macos_window_background_blur = 1
+config.macos_window_background_blur = 4
 
 -- - { key: H, mods: Command, chars: "\x14h" }
 
