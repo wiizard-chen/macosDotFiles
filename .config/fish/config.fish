@@ -4,8 +4,13 @@ if status is-interactive
     # eval (bash $CFG_PATH/fish/functions/zellijList.bash)
 end
 
+if test -d /opt/homebrew/opt/ruby/bin
+    set -x PATH /opt/homebrew/opt/ruby/bin $PATH
+    set -x PATH (gem environment gemdir)/bin $PATH
+end
+
 # http_proxy set
-export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+# export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
 set -gx XDG_RUNTIME_DIR /tmp
 
