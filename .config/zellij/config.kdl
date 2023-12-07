@@ -1,10 +1,12 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
     unbind "Ctrl o" "Ctrl r" "Ctrl q" "Ctrl d"
-    normal {
+    normal clear-defaults=true {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
         // bind "Ctrl x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "Ctrl t" { SwitchToMode "Tmux"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
     }
     tmux {
         // pane
@@ -35,7 +37,7 @@ keybinds {
         bind "8" { GoToTab 8; SwitchToMode "Normal"; }
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
 
-        bind "u" { EditScrollback; SwitchToMode "Normal"; }
+        // bind "u" { EditScrollback; SwitchToMode "Normal"; }
         // bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         // bind "Tab" { NewPane; SwitchToMode "Normal"; }
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
@@ -45,7 +47,7 @@ keybinds {
 
     // 方便搜索
     search {
-        bind "Ctrl s" { SwitchToMode "Normal"; }
+        // bind "Ctrl s" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
@@ -95,8 +97,8 @@ theme "rose-pine-moon"
 // default_layout "default"
 // default_layout "/$CFG_PATH/zellij/layout.kdl"
 
-// scrollback_editor "/usr/local/bin/nvim"
-scrollback_editor "/usr/bin/vim"
+scrollback_editor "nvim"
+// scrollback_editor "/usr/bin/vim"
 
 copy_command "pbcopy"                     // osx
 
