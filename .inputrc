@@ -1,0 +1,4 @@
+# Disable Ctrl-d (EOF) to prevent exiting
+# "\C-r": ""
+# "\C-t": ""
+

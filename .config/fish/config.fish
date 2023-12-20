@@ -30,6 +30,10 @@ alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
 
+
+# crazy fish
+# alias fish='rlwrap fish'
+
 # disable welcome message
 set -U fish_greeting ""
 
@@ -46,8 +50,9 @@ set -U fish_greeting ""
 # set -g fish_color_autosuggestion yellow
 
 # Rosé theme
+# fish_config theme choose "Rosé Pine"
 fish_config theme choose "Rosé Pine Moon"
-# fish_config theme choose "Rosé Pine Moon"
+
 
 # set bin path
 set -gx EDITOR nvim
@@ -71,16 +76,11 @@ set -gx CFG_PATH ~/.config
 set -x PATH (pyenv root)/shims $PATH
 
 
-
-
 # fist pane run start
 # sencond pane run lazy git
 # third pane run ohter
-
 # alias ide='source ~/.config/fish/functions/ide.bash'
 # alias project='source $CFG_PATH/fish/functions/project.bash'
-
-# alias
 
 # open my zellij layout
 alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
@@ -90,12 +90,12 @@ alias za="zellij ka -y; zellij delete-all-sessions -y"
 
 # run zellij command
 alias zrf="zellij run --"
-
 alias zrs="zellij run --direction down --"
 
 # restart zellij layout
 alias zr="za ; zl"
 
+# lazygit 
 alias lg='lazygit'
 
 
@@ -121,14 +121,9 @@ alias gln='git log --name-only'
 # clear all message
 alias cl='clear'
 
-# alias python=/usr/local/bin/python3
-# fisher tide theme remove
-# source (dirname (status --current-filename))/conf.d/tide.fish.fish
-
 starship init fish | source
 
 command clear
-#
 # set --export BUN_INSTALL "$HOME/.bun"
 # set --export PATH $BUN_INSTALL/bin $PATH
 

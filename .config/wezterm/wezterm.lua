@@ -13,7 +13,7 @@ end
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "rose-pine-moon"
+config.color_scheme = "rose-pine"
 
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 
@@ -32,9 +32,11 @@ config.window_padding = {
 -- config.use_ime = false
 
 -- macos blur
-config.window_background_opacity = 0.8
+-- config.window_background_opacity = 0.8
+-- config.macos_window_background_blur = 4
 
-config.macos_window_background_blur = 4
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 20
 
 -- - { key: H, mods: Command, chars: "\x14h" }
 
@@ -46,6 +48,11 @@ config.keys = {
 	{
 		key = "h",
 		mods = "CMD",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		key = "y",
+		mods = "CTRL",
 		action = wezterm.action.DisableDefaultAssignment,
 	},
 
