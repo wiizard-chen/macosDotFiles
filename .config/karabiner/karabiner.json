@@ -126,8 +126,7 @@
                       "^com\\.apple\\.x11$",
                       "^org\\.macosforge\\.xquartz\\.X11$",
                       "^org\\.macports\\.X11$",
-                      "^com\\.sublimetext\\.",
-                      "^com\\.github\\.wez\\.wezterm$"
+                      "^com\\.sublimetext\\."
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -190,8 +189,7 @@
                       "^com\\.apple\\.x11$",
                       "^org\\.macosforge\\.xquartz\\.X11$",
                       "^org\\.macports\\.X11$",
-                      "^com\\.sublimetext\\.",
-                      "^com\\.github\\.wez\\.wezterm$"
+                      "^com\\.sublimetext\\."
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -816,4 +814,3 @@
     }
   ]
 }
-

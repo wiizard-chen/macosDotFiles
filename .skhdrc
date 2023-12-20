@@ -40,6 +40,7 @@ alt - s : yabai -m window --toggle sticky;\
 # toggle padding and gap
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
+
 # float / unfloat window and center on screen
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 20:20:2:2:16:16
