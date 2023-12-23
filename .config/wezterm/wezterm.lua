@@ -12,6 +12,14 @@ end
 
 -- This is where you actually apply your config choices
 
+local leaderKey = ","
+
+local tmuxLeaderKey = "\x14"
+
+local escapeKey = "\x1b"
+
+local combineKey = escapeKey .. leaderKey
+
 -- For example, changing the color scheme:
 config.color_scheme = "rose-pine"
 
@@ -66,126 +74,126 @@ config.keys = {
 	{
 		key = "h",
 		mods = "CMD",
-		action = act.SendString("\x14h"),
+		action = act.SendString(tmuxLeaderKey .. "h"),
 	},
 	{
 		key = "j",
 		mods = "CMD",
-		action = act.SendString("\x14j"),
+		action = act.SendString(tmuxLeaderKey .. "j"),
 	},
 	{
 		key = "k",
 		mods = "CMD",
-		action = act.SendString("\x14k"),
+		action = act.SendString(tmuxLeaderKey .. "k"),
 	},
 
 	{
 		key = "l",
 		mods = "CMD",
-		action = act.SendString("\x14l"),
+		action = act.SendString(tmuxLeaderKey .. "l"),
 	},
 
 	--open nvim select text
-	{
-		key = "u",
-		mods = "CMD",
-		action = act.SendString("\x14u"),
-	},
+	-- {
+	-- 	key = "u",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString("\x14u"),
+	-- },
 	{
 		key = "Backslash",
 		mods = "CMD",
-		action = act.SendString("\x14v"),
+		action = act.SendString(tmuxLeaderKey .. "v"),
 	},
 	{
 		key = "s",
 		mods = "CMD",
-		action = act.SendString("\x14s"),
+		action = act.SendString(tmuxLeaderKey .. "s"),
 	},
 
 	{
 		key = "o",
 		mods = "CMD",
-		action = act.SendString("\x14f"),
+		action = act.SendString(tmuxLeaderKey .. "f"),
 	},
 
 	{
 		key = "m",
 		mods = "CMD",
-		action = act.SendString("\x14m"),
+		action = act.SendString(tmuxLeaderKey .. "m"),
 	},
 	{
 		key = "e",
 		mods = "CMD",
-		action = act.SendString("\x14e"),
+		action = act.SendString(tmuxLeaderKey .. "e"),
 	},
 
 	-- nvim Command
 	{
 		key = "1",
 		mods = "CMD",
-		action = act.SendString("\x1b 1"),
+		action = act.SendString(combineKey .. "1"),
 	},
 	{
 		key = "2",
 		mods = "CMD",
-		action = act.SendString("\x1b 2"),
+		action = act.SendString(combineKey .. "2"),
 	},
 	{
 		key = "3",
 		mods = "CMD",
-		action = act.SendString("\x1b 3"),
+		action = act.SendString(combineKey .. "3"),
 	},
 	{
 		key = "4",
 		mods = "CMD",
-		action = act.SendString("\x1b 4"),
+		action = act.SendString(combineKey .. "4"),
 	},
 	{
 		key = "5",
 		mods = "CMD",
-		action = act.SendString("\x1b 5"),
+		action = act.SendString(combineKey .. "5"),
 	},
 	{
 		key = "6",
 		mods = "CMD",
-		action = act.SendString("\x1b 6"),
+		action = act.SendString(combineKey .. "6"),
 	},
 	{
 		key = "7",
 		mods = "CMD",
-		action = act.SendString("\x1b 7"),
+		action = act.SendString(combineKey .. "7"),
 	},
 	{
 		key = "8",
 		mods = "CMD",
-		action = act.SendString("\x1b 8"),
+		action = act.SendString(combineKey .. "8"),
 	},
 	{
 		key = "9",
 		mods = "CMD",
-		action = act.SendString("\x1b 9"),
+		action = act.SendString(combineKey .. "9"),
 	},
 
+	-- nvim editor
 	{
 		key = "n",
 		mods = "CMD",
-		action = act.SendString("\x1b n"),
+		action = act.SendString(combineKey .. "n"),
 	},
 	{
 		key = "f",
 		mods = "CMD",
-		action = act.SendString("\x1b sb"),
+		action = act.SendString(combineKey .. "sb"),
 	},
-
 	{
 		key = "p",
 		mods = "CMD",
-		action = act.SendString("\x1b  "),
+		action = act.SendString(combineKey .. " "),
 	},
 	{
 		key = "r",
 		mods = "CMD",
-		action = act.SendString("\x1b sr"),
+		action = act.SendString(combineKey .. "sr"),
 	},
 	{
 		key = "i",
@@ -205,39 +213,39 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CMD",
-		action = act.SendString(" bD"),
+		action = act.SendString(combineKey .. "bD"),
 	},
 	{
 		key = "b",
 		mods = "CMD",
-		action = act.SendString(" e"),
+		action = act.SendString(combineKey .. "e"),
 	},
 
 	-- zellij tab switch
 	{
 		key = "1",
 		mods = "OPT",
-		action = act.SendString("\x141"),
+		action = act.SendString(tmuxLeaderKey .. "1"),
 	},
 	{
 		key = "2",
 		mods = "OPT",
-		action = act.SendString("\x142"),
+		action = act.SendString(tmuxLeaderKey .. "2"),
 	},
 	{
 		key = "3",
 		mods = "OPT",
-		action = act.SendString("\x143"),
+		action = act.SendString(tmuxLeaderKey .. "3"),
 	},
 	{
 		key = "4",
 		mods = "OPT",
-		action = act.SendString("\x144"),
+		action = act.SendString(tmuxLeaderKey .. "4"),
 	},
 	{
 		key = "5",
 		mods = "OPT",
-		action = act.SendString("\x145"),
+		action = act.SendString(tmuxLeaderKey .. "5"),
 	},
 }
 -- and finally, return the configuration to wezterm
