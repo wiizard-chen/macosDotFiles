@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# make a directory
 # get absolute path
 SCRIPT_PATH=$(pwd)
 echo "当前脚本文件的绝对路径：$SCRIPT_PATH"
