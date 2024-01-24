@@ -168,7 +168,6 @@
                       "^com\\.2X\\.Client\\.Mac$",
                       "^com\\.apple\\.Terminal$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^com\\.github\\.wez\\.wezterm$",
                       "^co\\.zeit\\.hyperterm$",
                       "^co\\.zeit\\.hyper$",
                       "^org\\.alacritty$",
@@ -189,7 +188,9 @@
                       "^com\\.apple\\.x11$",
                       "^org\\.macosforge\\.xquartz\\.X11$",
                       "^org\\.macports\\.X11$",
-                      "^com\\.sublimetext\\."
+                      "^com\\.sublimetext\\.",
+                      "^com\\.github\\.wez\\.wezterm$",
+                      "^com\\.microsoft\\.VSCode$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -235,7 +236,6 @@
                       "^co\\.zeit\\.hyper$",
                       "^net\\.kovidgoyal\\.kitty$",
                       "^org\\.vim\\.",
-                      "^com\\.github\\.wez\\.wezterm$",
                       "^com\\.qvacua\\.VimR$",
                       "^com\\.vmware\\.fusion$",
                       "^com\\.vmware\\.horizon$",
@@ -253,7 +253,8 @@
                       "^org\\.macports\\.X11$",
                       "^com\\.sublimetext\\.",
                       "^org\\.alacritty$",
-                      "^com\\.github\\.wez\\.wezterm$"
+                      "^com\\.github\\.wez\\.wezterm$",
+                      "^com\\.microsoft\\.VSCode$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -531,7 +532,28 @@
           "mouse_flip_y": false,
           "mouse_swap_wheels": false,
           "mouse_swap_xy": false,
-          "simple_modifications": [],
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "caps_lock"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_control"
+              },
+              "to": [
+                {
+                  "key_code": "caps_lock"
+                }
+              ]
+            }
+          ],
           "treat_as_built_in_keyboard": false
         },
         {
@@ -814,3 +836,4 @@
     }
   ]
 }
+

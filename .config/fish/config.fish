@@ -9,6 +9,12 @@ if test -d /opt/homebrew/opt/ruby/bin
     set -x PATH (gem environment gemdir)/bin $PATH
 end
 
+if test -d /opt/homebrew/opt/ruby/bin
+    set -x PATH /opt/homebrew/opt/ruby/bin $PATH
+    set -x PATH (gem environment gemdir)/bin $PATH
+end
+
+
 # http_proxy set
 # export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
@@ -56,12 +62,12 @@ fish_config theme choose "Rosé Pine Moon"
 
 # set bin path
 set -gx EDITOR nvim
+set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH ~/.bun/bin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH

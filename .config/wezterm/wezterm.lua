@@ -104,11 +104,11 @@ config.keys = {
 		mods = "CMD",
 		action = act.SendString(tmuxLeaderKey .. "v"),
 	},
-	{
-		key = "s",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "s"),
-	},
+	-- {
+	-- 	key = "s",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "s"),
+	-- },
 
 	{
 		key = "o",
@@ -181,6 +181,11 @@ config.keys = {
 		action = act.SendString(combineKey .. "n"),
 	},
 	{
+		key = "s",
+		mods = "CMD",
+		action = act.SendString(combineKey .. "fs"),
+	},
+	{
 		key = "f",
 		mods = "CMD",
 		action = act.SendString(combineKey .. "sb"),
@@ -219,6 +224,11 @@ config.keys = {
 		key = "b",
 		mods = "CMD",
 		action = act.SendString(combineKey .. "e"),
+	},
+	{
+		key = "e",
+		mods = "CMD",
+		action = act.SendString(combineKey .. "fb"),
 	},
 
 	-- zellij tab switch
