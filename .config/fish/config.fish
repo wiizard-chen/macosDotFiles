@@ -132,6 +132,13 @@ if type -q exa
     alias ls exa
 end
 
+if type -q eza
+    alias ll "eza -l -g --icons"
+    alias lla "ll -a"
+    alias ls eza
+end
+
+
 alias gln='git log --name-only'
 
 # Attaches tmux to the last session; creates a new session if none exists.

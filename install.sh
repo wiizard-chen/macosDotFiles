@@ -30,3 +30,7 @@ ln -s $SKHD_PATH ~/.skhdrc
 # ln -s $WRAP_PATH ~/.inputrc
 
 echo "finsh symbol link"
+
+echo "start service"
+skhd --start-service
+yabai --start-service
