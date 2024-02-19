@@ -109,7 +109,8 @@ set -x PATH (pyenv root)/shims $PATH
 # alias project='source $CFG_PATH/fish/functions/project.bash'
 
 # open my zellij layout
-alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
+# alias zl='bash $CFG_PATH/fish/functions/zellijList.bash'
+alias zl='peco_select_zellij'
 
 # close all zellij session
 alias za="zellij ka -y; zellij delete-all-sessions -y"
