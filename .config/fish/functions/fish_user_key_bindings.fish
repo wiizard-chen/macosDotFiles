@@ -1,4 +1,3 @@
-
 function paste_from_clipboard
     # echo test
     set clipboard_contents (pbpaste)

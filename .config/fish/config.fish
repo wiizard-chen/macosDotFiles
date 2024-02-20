@@ -113,7 +113,7 @@ set -x PATH (pyenv root)/shims $PATH
 alias zl='peco_select_zellij'
 
 # close all zellij session
-alias za="zellij ka -y; zellij delete-all-sessions -y"
+alias za="zellij da -y"
 
 # run zellij command
 alias zrf="zellij run --"
