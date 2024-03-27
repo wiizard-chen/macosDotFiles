@@ -101,6 +101,9 @@ set -gx CFG_PATH ~/.config
 # pyenv
 set -x PATH (pyenv root)/shims $PATH
 
+# lazygit
+set -x XDG_CONFIG_HOME "$HOME/.config"
+
 
 # fist pane run start
 # sencond pane run lazy git
@@ -113,7 +116,8 @@ set -x PATH (pyenv root)/shims $PATH
 alias zl='peco_select_zellij'
 
 # close all zellij session
-alias za="zellij da -y"
+alias zd="zellij ka -y | zellij da -y | zellij ls"
+alias za="zellij attach -c"
 
 # run zellij command
 alias zrf="zellij run --"
