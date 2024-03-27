@@ -21,11 +21,15 @@ local escapeKey = "\x1b"
 local combineKey = escapeKey .. leaderKey
 
 -- For example, changing the color scheme:
-config.color_scheme = "rose-pine"
+-- config.color_scheme = "rose-pine"
+-- config.color_scheme = "One Dark (Gogh)"
+
+config.color_scheme = "Tokyo Night"
+-- config.color_scheme = 'Tokyo Night'
 
 config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Bold" })
 
-config.font_size = 15.0
+config.font_size = 14.6
 
 config.window_decorations = "RESIZE"
 
@@ -43,8 +47,8 @@ config.window_padding = {
 -- config.window_background_opacity = 0.8
 -- config.macos_window_background_blur = 4
 
-config.window_background_opacity = 0.92
--- config.macos_window_background_blur = 20
+-- config.window_background_opacity = 0
+-- config.macos_window_background_blur = 5
 
 -- - { key: H, mods: Command, chars: "\x14h" }
 
