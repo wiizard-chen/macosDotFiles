@@ -102,3 +102,5 @@ scrollback_editor "nvim"
 
 copy_command "pbcopy"                     // osx
 
+// session_serialization false
+

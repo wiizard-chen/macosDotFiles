@@ -37,6 +37,7 @@ yabai -m config mouse_drop_action swap
 
 # general space settings
 yabai -m config layout bsp
+# yabai -m config layout float
 yabai -m config top_padding 15
 yabai -m config bottom_padding 15
 yabai -m config left_padding 15
@@ -54,6 +55,11 @@ yabai -m rule --add app="^balenaEtcher$" manage=off
 yabai -m rule --add app="^Creative Cloud$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
-yabai -m rule --add app="Raycast" manage=off
+yabai -m rule --add app="^WezTerm" manage=off
+yabai -m rule --add app="^Books" manage=off
+yabai -m rule --add app="^QQ" manage=off
+yabai -m rule --add app="^Wechat" manage=off
+yabai -m rule --add app="^Microsoft Teams" manage=off
+yabai -m rule --add app="^Microsoft Outlook" manage=off
 
 echo "yabai configuration loaded.."
