@@ -1,9 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/weizi.chen/ghq/github.com/wiizard-chen/macosDotFiles
-- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/kone_new_maintenance_tool_web
 - /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/dev_branch_maintenance
 - /Users/weizi.chen/ghq/github.com/wiizard-chen/macosDotFiles/.config/nvim
+- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/kone_new_maintenance_tool_web
+- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/kone_new_maintenance_tool_app
 - /Users/weizi.chen/ghq/github.com/LazyVim/LazyVim
 startuppopupversion: 5
 customcommandshistory: []
