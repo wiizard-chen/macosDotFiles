@@ -29,9 +29,11 @@ config.color_scheme = "Tokyo Night"
 
 -- config.font = wezterm.font("Menlo")
 
-config.font = wezterm.font("Maple Mono")
+-- config.font = wezterm.font("Maple Mono")
 
--- config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Bold" })
+config.font = wezterm.font("FiraCode Nerd Font Mono")
+
+-- config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 
 config.font_size = 16
 
