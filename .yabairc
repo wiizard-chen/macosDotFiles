@@ -1,67 +1,73 @@
 #!/usr/bin/env sh
 
-# ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
-# ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
-#  ╚████╔╝ ███████║██████╔╝███████║██║
-#   ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
-#    ██║   ██║  ██║██████╔╝██║  ██║██║
-#    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
-# A tiling window manager for macOS
-# https://github.com/koekeishiya/yabai
-
+# necessary to load scripting-addition during startup on macOS Big Sur
+# *yabai --load-sa* is configured to run through sudo without a password
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+# mission-control desktop labels
+yabai -m space 1 --label code
+yabai -m space 2 --label mail
+yabai -m space 3 --label web
+yabai -m space 4 --label notes
+yabai -m space 5 --label re
+yabai -m space 6 --label media
+yabai -m space 7 --label social
+yabai -m space 8 --label games
+
+# window rules
+yabai -m rule --add app="^Mail$" space=mail
+yabai -m rule --add app="^Safari$" space=web
+yabai -m rule --add app="^Notes$" space=notes
+yabai -m rule --add app="^ida64$" space=re
+yabai -m rule --add app="^Transmission$" space=media
+yabai -m rule --add app="^Spotify$" space=media
+yabai -m rule --add app="^Discord$" space=social grid=1:1:0:0:1:1 manage=off
+yabai -m rule --add app="^Steam$" space=games manage=off
+yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
+yabai -m rule --add app="^mpv$" manage=off border=off sticky=on layer=above opacity=1.0 grid=8:8:6:0:2:2
+
+# signals
+yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
+yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
+
+# specific space settings
+yabai -m config --space mail layout stack
+yabai -m config --space games layout float
+
 # global settings
-yabai -m config mouse_follows_focus off
-yabai -m config focus_follows_mouse off
-yabai -m config window_origin_display default
-yabai -m config window_placement second_child
-yabai -m config window_topmost off
-yabai -m config window_shadow off
-yabai -m config window_opacity off
-yabai -m config window_opacity_duration 0.0
-yabai -m config active_window_opacity 0.0
-yabai -m config normal_window_opacity 0.0
-yabai -m config window_border off
-yabai -m config window_border_width 6
-yabai -m config active_window_border_color 0xff775759
-yabai -m config normal_window_border_color 0xff555555
-yabai -m config insert_feedback_color 0xffd75f5f
-yabai -m config split_ratio 0.50
-yabai -m config auto_balance off
-yabai -m config mouse_modifier fn
-yabai -m config mouse_action1 move
-yabai -m config mouse_action2 resize
-yabai -m config mouse_drop_action swap
-
-# general space settings
-yabai -m config layout bsp
-# yabai -m config layout float
-
-padding_line=5
-yabai -m config top_padding $padding_line
-yabai -m config bottom_padding $padding_line
-yabai -m config left_padding $padding_line
-yabai -m config right_padding $padding_line
-yabai -m config window_gap $padding_line
-
-# apps to not manage (ignore)
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Archive Utility$" manage=off
-yabai -m rule --add app="^Wally$" manage=off
-yabai -m rule --add app="^Pika$" manage=off
-yabai -m rule --add app="^balenaEtcher$" manage=off
-yabai -m rule --add app="^Creative Cloud$" manage=off
-yabai -m rule --add app="^Logi Options$" manage=off
-yabai -m rule --add app="^Alfred Preferences$" manage=off
-yabai -m rule --add app="^Books" manage=off
-
-yabai -m rule --add app="^com.github.wez.wezterm" manage=off
-yabai -m rule --add app="^com.tencent.qq" manage=off
-yabai -m rule --add app="^company.thebrowser.Browser" manage=off
-yabai -m rule --add app="com.tencent.xinWeChat" manage=off
-yabai -m rule --add app="com.microsoft.teams2" manage=off
-yabai -m rule --add app="com.microsoft.Outlook" manage=off
+yabai -m config \
+	external_bar off:41:0 \
+	mouse_follows_focus on \
+	focus_follows_mouse autoraise \
+	window_placement second_child \
+	window_topmost off \
+	window_shadow off \
+	window_animation_duration 0.25 \
+	window_opacity_duration 0.25 \
+	active_window_opacity 0.90 \
+	normal_window_opacity 0.50 \
+	window_opacity on \
+	insert_feedback_color 0xaad75f5f \
+	active_window_border_color 0xBF775759 \
+	normal_window_border_color 0x7f353535 \
+	window_border_width 4 \
+	window_border_radius 12 \
+	window_border_blur on \
+	window_border_hidpi on \
+	window_border on \
+	split_ratio 0.50 \
+	split_type auto \
+	auto_balance off \
+	top_padding 10 \
+	left_padding 10 \
+	right_padding 10 \
+	bottom_padding 10 \
+	window_gap 10 \
+	layout bsp \
+	mouse_modifier fn \
+	mouse_action1 move \
+	mouse_action2 resize \
+	mouse_drop_action swap
 
 echo "yabai configuration loaded.."
