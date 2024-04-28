@@ -27,9 +27,13 @@ local combineKey = escapeKey .. leaderKey
 config.color_scheme = "Tokyo Night"
 -- config.color_scheme = 'Tokyo Night'
 
-config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Bold" })
+-- config.font = wezterm.font("Menlo")
 
-config.font_size = 14.6
+config.font = wezterm.font("Maple Mono")
+
+-- config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Bold" })
+
+config.font_size = 16
 
 config.window_decorations = "RESIZE"
 

@@ -55,11 +55,13 @@ yabai -m rule --add app="^balenaEtcher$" manage=off
 yabai -m rule --add app="^Creative Cloud$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
-yabai -m rule --add app="^WezTerm" manage=off
 yabai -m rule --add app="^Books" manage=off
-yabai -m rule --add app="^QQ" manage=off
-yabai -m rule --add app="^Wechat" manage=off
-yabai -m rule --add app="^Microsoft Teams" manage=off
-yabai -m rule --add app="^Microsoft Outlook" manage=off
+
+yabai -m rule --add app="com.github.wez.wezterm" manage=off
+yabai -m rule --add app="com.tencent.qq" manage=off
+yabai -m rule --add app="company.thebrowser.Browser" manage=off
+yabai -m rule --add app="com.tencent.xinWeChat" manage=off
+yabai -m rule --add app="com.microsoft.teams2" manage=off
+yabai -m rule --add app="com.microsoft.Outlook" manage=off
 
 echo "yabai configuration loaded.."

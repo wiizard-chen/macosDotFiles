@@ -7,3 +7,5 @@
 .config/karabiner/automatic_backups
 .config/github-copilot
 .config/flutter/tool_state
+.config/.DS_Store
+.config/.DS_Store

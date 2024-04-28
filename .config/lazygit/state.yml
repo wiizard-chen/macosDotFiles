@@ -1,16 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
+- /Users/weizi.chen/ghq/github.com/wiizard-chen/macosDotFiles/.config/nvim
 - /Users/weizi.chen/ghq/github.com/wiizard-chen/macosDotFiles
 - /Users/weizi.chen/.config/nvim
 - /Users/weizi.chen/ghq/github.com/wiizard-chen/w_lazynvim
-- /Users/weizi.chen/ghq/github.com/LazyVim/LazyVim
-- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/kone_new_maintenance_tool_web
-- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/dev_branch_maintenance
-- /Users/weizi.chen/ghq/github.com/vbenjs/vue-vben-admin
-- /Users/weizi.chen/ghq/github.com/web3-brothers/web3_science_python
-- /Users/weizi.chen/ghq/github.com/wiizard-chen/macosDotFiles/.config/nvim
-- /Users/weizi.chen/ghq/gitlab.prod.devops.dps.kone.cn/appmigration/chinaapplications/newmaintenancetool-cn/kone_new_maintenance_tool_app
 startuppopupversion: 5
+lastversion: 0.41.0
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always

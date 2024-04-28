@@ -16,6 +16,8 @@ echo "yabai path：$YABAI_PATH"
 SKHD_PATH="$SCRIPT_PATH/.skhdrc"
 echo "skhd path：$SKHD_PATH"
 
+# add backu
+
 # WRAP_PATH="$SCRIPT_PATH/.inputrc"
 # echo "skhd path：$WRAP_PATH"
 
