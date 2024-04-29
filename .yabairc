@@ -37,7 +37,7 @@ yabai -m rule --add app="^Books" space=books manage=off
 
 yabai -m rule --add app="^QQ" space=social grid=1:1:0:0:1:1
 yabai -m rule --add app="^WeChat" space=social grid=1:1:0:0:1:1
-yabai -m rule --add app="^Visual Studio Code" space=vscode
+yabai -m rule --add app="Code" space=vscode
 yabai -m rule --add app="^WezTerm" space=terminal
 yabai -m rule --add app="^Arc" space=work_web
 
@@ -48,7 +48,7 @@ yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m q
 # specific space settings
 # yabai -m config --space work_chat layout stack
 yabai -m config --space social layout stack
-yabai -m config --space books layout stack
+# yabai -m config --space books layout stack
 # yabai -m config --space terminal layout stack
 
 padding_line=5

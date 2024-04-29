@@ -5,6 +5,5 @@ brew install --cask alfred
 brew install --cask discord
 brew install --cask obsidian
 brew install --cask postman
-brew install --cask spacelauncher
 brew install --cask google-chrome
-brew install --cask dropbox
+# brew install --cask dropbox
