@@ -28,12 +28,12 @@ config.color_scheme = "Tokyo Night"
 -- config.color_scheme = 'Tokyo Night'
 
 -- config.font = wezterm.font("Menlo")
+config.font = wezterm.font("Maple Mono", { weight = "Regular" })
 
--- config.font = wezterm.font("Maple Mono")
-
-config.font = wezterm.font("FiraCode Nerd Font Mono")
-
+-- config.font = wezterm.font("FiraCode Nerd Font Mono")
 -- config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
+
+config.harfbuzz_features = { "ss01", "cv01", "cv04=1", "cv03", "ss02", "ss03", "ss04" }
 
 config.font_size = 16
 
