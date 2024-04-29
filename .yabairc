@@ -1,4 +1,12 @@
 #!/usr/bin/env sh
+# ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
+# ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
+#  ╚████╔╝ ███████║██████╔╝███████║██║
+#   ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
+#    ██║   ██║  ██║██████╔╝██║  ██║██║
+#    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
+# A tiling window manager for macOS
+# https://github.com/koekeishiya/yabai
 
 # necessary to load scripting-addition during startup on macOS Big Sur
 # *yabai --load-sa* is configured to run through sudo without a password
@@ -6,34 +14,44 @@ sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # mission-control desktop labels
-yabai -m space 1 --label code
-yabai -m space 2 --label mail
-yabai -m space 3 --label web
-yabai -m space 4 --label notes
-yabai -m space 5 --label re
-yabai -m space 6 --label media
-yabai -m space 7 --label social
-yabai -m space 8 --label games
+yabai -m space 1 --label work_chat
+yabai -m space 2 --label social
+yabai -m space 3 --label social_web
+yabai -m space 4 --label books
+
+yabai -m space 5 --label terminal
+yabai -m space 6 --label work_web
+yabai -m space 7 --label vscode
+yabai -m space 8 --label notes
+yabai -m space 9 --label other
 
 # window rules
-yabai -m rule --add app="^Mail$" space=mail
-yabai -m rule --add app="^Safari$" space=web
-yabai -m rule --add app="^Notes$" space=notes
-yabai -m rule --add app="^ida64$" space=re
-yabai -m rule --add app="^Transmission$" space=media
-yabai -m rule --add app="^Spotify$" space=media
-yabai -m rule --add app="^Discord$" space=social grid=1:1:0:0:1:1 manage=off
-yabai -m rule --add app="^Steam$" space=games manage=off
-yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
-yabai -m rule --add app="^mpv$" manage=off border=off sticky=on layer=above opacity=1.0 grid=8:8:6:0:2:2
+
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Alfred Preferences$" manage=off
+yabai -m rule --add app="^Microsoft Teams" space=work_chat manage=off
+yabai -m rule --add app="^Microsoft Outlook" space=work_chat manage=off
+
+yabai -m rule --add app="^Google Chrome$" space=social_web manage=off
+yabai -m rule --add app="^Books" space=books manage=off
+
+yabai -m rule --add app="^QQ" space=social grid=1:1:0:0:1:1
+yabai -m rule --add app="^WeChat" space=social grid=1:1:0:0:1:1
+yabai -m rule --add app="^Visual Studio Code" space=vscode
+yabai -m rule --add app="^WezTerm" space=terminal
+yabai -m rule --add app="^Arc" space=work_web
 
 # signals
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
 yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
 # specific space settings
-yabai -m config --space mail layout stack
-yabai -m config --space games layout float
+# yabai -m config --space work_chat layout stack
+yabai -m config --space social layout stack
+yabai -m config --space books layout stack
+# yabai -m config --space terminal layout stack
+
+padding_line=5
 
 # global settings
 yabai -m config \
@@ -59,11 +77,11 @@ yabai -m config \
 	split_ratio 0.50 \
 	split_type auto \
 	auto_balance off \
-	top_padding 10 \
-	left_padding 10 \
-	right_padding 10 \
-	bottom_padding 10 \
-	window_gap 10 \
+	top_padding $padding_line \
+	left_padding $padding_line \
+	right_padding $padding_line \
+	bottom_padding $padding_line \
+	window_gap $padding_line \
 	layout bsp \
 	mouse_modifier fn \
 	mouse_action1 move \

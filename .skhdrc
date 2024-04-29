@@ -1,17 +1,20 @@
-# open terminal
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
-
-# open mpv with url from clipboard
-shift + cmd - m : mpv $(pbpaste)
+# ███████╗██╗  ██╗██╗  ██╗██████╗ 
+# ██╔════╝██║ ██╔╝██║  ██║██╔══██╗
+# ███████╗█████╔╝ ███████║██║  ██║
+# ╚════██║██╔═██╗ ██╔══██║██║  ██║
+# ███████║██║  ██╗██║  ██║██████╔╝
+# ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ 
+# Simple hotkey daemon for macOS
+# https://github.com/koekeishiya/skhd
 
 # focus window
-alt - x : yabai -m window --focus recent
+# alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
-alt - z : yabai -m window --focus stack.prev
-alt - c : yabai -m window --focus stack.next
+# alt - z : yabai -m window --focus stack.prev
+# alt - c : yabai -m window --focus stack.next
 
 # swap window
 shift + alt - x : yabai -m window --swap recent
@@ -134,23 +137,26 @@ alt - y : yabai -m space --mirror y-axis
 alt - x : yabai -m space --mirror x-axis
 
 # toggle desktop offset
-alt - a : yabai -m space --toggle padding --toggle gap
+# alt - a : yabai -m space --toggle padding --toggle gap
 
 # toggle window parent zoom
-alt - d : yabai -m window --toggle zoom-parent
+# alt - d : yabai -m window --toggle zoom-parent
 
 # toggle window fullscreen zoom
-alt - f : yabai -m window --toggle zoom-fullscreen
+# alt - o : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+# shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # toggle window split type
 alt - e : yabai -m window --toggle split
 
 # float / unfloat window and restore position
 # alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
-alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 20:20:1:1:18:18
+
 
 # toggle sticky (show on all spaces)
 alt - s : yabai -m window --toggle sticky
