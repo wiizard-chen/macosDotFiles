@@ -50,8 +50,8 @@ config.window_padding = {
 -- config.use_ime = false
 
 -- macos blur
-config.window_background_opacity = 0.8
-config.macos_window_background_blur = 8
+-- config.window_background_opacity = 0.8
+-- config.macos_window_background_blur = 8
 
 -- config.window_background_opacity = 0
 -- config.macos_window_background_blur = 5

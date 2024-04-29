@@ -18,7 +18,6 @@ yabai -m space 1 --label work_chat
 yabai -m space 2 --label social
 yabai -m space 3 --label social_web
 yabai -m space 4 --label books
-
 yabai -m space 5 --label terminal
 yabai -m space 6 --label work_web
 yabai -m space 7 --label vscode
@@ -38,7 +37,7 @@ yabai -m rule --add app="^Books" space=books manage=off
 yabai -m rule --add app="^QQ" space=social grid=1:1:0:0:1:1
 yabai -m rule --add app="^WeChat" space=social grid=1:1:0:0:1:1
 yabai -m rule --add app="Code" space=vscode
-yabai -m rule --add app="^WezTerm" space=terminal
+yabai -m rule --add app="WezTerm" space=terminal
 yabai -m rule --add app="^Arc" space=work_web
 
 # signals
@@ -47,7 +46,7 @@ yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m q
 
 # specific space settings
 # yabai -m config --space work_chat layout stack
-yabai -m config --space social layout stack
+yabai -m config --space social layout float
 # yabai -m config --space books layout stack
 # yabai -m config --space terminal layout stack
 
