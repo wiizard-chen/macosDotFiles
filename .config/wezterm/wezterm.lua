@@ -247,31 +247,31 @@ config.keys = {
 	},
 
 	-- zellij tab switch
-	{
-		key = "1",
-		mods = "OPT",
-		action = act.SendString(tmuxLeaderKey .. "1"),
-	},
-	{
-		key = "2",
-		mods = "OPT",
-		action = act.SendString(tmuxLeaderKey .. "2"),
-	},
-	{
-		key = "3",
-		mods = "OPT",
-		action = act.SendString(tmuxLeaderKey .. "3"),
-	},
-	{
-		key = "4",
-		mods = "OPT",
-		action = act.SendString(tmuxLeaderKey .. "4"),
-	},
-	{
-		key = "5",
-		mods = "OPT",
-		action = act.SendString(tmuxLeaderKey .. "5"),
-	},
+	-- {
+	-- 	key = "1",
+	-- 	mods = "OPT",
+	-- 	action = act.SendString(tmuxLeaderKey .. "1"),
+	-- },
+	-- {
+	-- 	key = "2",
+	-- 	mods = "OPT",
+	-- 	action = act.SendString(tmuxLeaderKey .. "2"),
+	-- },
+	-- {
+	-- 	key = "3",
+	-- 	mods = "OPT",
+	-- 	action = act.SendString(tmuxLeaderKey .. "3"),
+	-- },
+	-- {
+	-- 	key = "4",
+	-- 	mods = "OPT",
+	-- 	action = act.SendString(tmuxLeaderKey .. "4"),
+	-- },
+	-- {
+	-- 	key = "5",
+	-- 	mods = "OPT",
+	-- 	action = act.SendString(tmuxLeaderKey .. "5"),
+	-- },
 }
 -- and finally, return the configuration to wezterm
 return config

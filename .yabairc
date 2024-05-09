@@ -36,9 +36,9 @@ yabai -m rule --add app="^Books" space=books manage=off
 
 yabai -m rule --add app="^QQ" space=social grid=1:1:0:0:1:1
 yabai -m rule --add app="^WeChat" space=social grid=1:1:0:0:1:1
-yabai -m rule --add app="Code" space=vscode
 yabai -m rule --add app="WezTerm" space=terminal
-yabai -m rule --add app="^Arc" space=work_web
+yabai -m rule --add app="Arc" space=work_web
+yabai -m rule --add app="Code" space=vscode
 
 # signals
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
