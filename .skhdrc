@@ -177,5 +177,6 @@ ctrl + alt - s : yabai -m space --layout $(yabai -m query --spaces --space | jq 
 cmd + ctrl - u : /usr/bin/python3 ~/.config/skhdShell/switch.py WezTerm
 cmd + ctrl - i : /usr/bin/python3 ~/.config/skhdShell/switch.py Arc
 cmd + ctrl - o : /usr/bin/python3 ~/.config/skhdShell/switch.py Code
-cmd + ctrl - k : /usr/bin/python3 ~/.config/skhdShell/switch.py Notes
+# cmd + ctrl - k : /usr/bin/python3 ~/.config/skhdShell/switch.py Notes
+cmd + ctrl - k : /usr/bin/python3 ~/.config/skhdShell/switch.py Obsidian
 

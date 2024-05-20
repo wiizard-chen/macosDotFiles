@@ -17,12 +17,11 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m space 1 --label work_chat
 yabai -m space 2 --label social
 yabai -m space 3 --label social_web
-yabai -m space 4 --label books
+yabai -m space 4 --label notes
 yabai -m space 5 --label terminal
 yabai -m space 6 --label work_web
 yabai -m space 7 --label vscode
-yabai -m space 8 --label notes
-yabai -m space 9 --label other
+yabai -m space 8 --label other
 
 # window rules
 
@@ -32,7 +31,6 @@ yabai -m rule --add app="^Microsoft Teams" space=work_chat manage=off
 yabai -m rule --add app="^Microsoft Outlook" space=work_chat manage=off
 
 yabai -m rule --add app="^Google Chrome$" space=social_web manage=off
-yabai -m rule --add app="^Books" space=books manage=off
 
 yabai -m rule --add app="^QQ" space=social grid=1:1:0:0:1:1
 yabai -m rule --add app="^WeChat" space=social grid=1:1:0:0:1:1
