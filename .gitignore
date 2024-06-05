@@ -11,3 +11,5 @@
 .config/.DS_Store
 .config/lazygit/state.yml
 .config/yarn/global
+.config/raycast
+.config/.DS_Store
