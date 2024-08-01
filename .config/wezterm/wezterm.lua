@@ -39,7 +39,7 @@ config.font_size = 16
 
 config.window_decorations = "RESIZE"
 
-config.enable_tab_bar = false
+-- config.enable_tab_bar = false
 
 config.window_padding = {
 	left = 2,
@@ -81,27 +81,27 @@ config.keys = {
 	},
 
 	-- switch zellij pane
-	{
-		key = "h",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "h"),
-	},
-	{
-		key = "j",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "j"),
-	},
-	{
-		key = "k",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "k"),
-	},
-
-	{
-		key = "l",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "l"),
-	},
+	-- {
+	-- 	key = "h",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "h"),
+	-- },
+	-- {
+	-- 	key = "j",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "j"),
+	-- },
+	-- {
+	-- 	key = "k",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "k"),
+	-- },
+	--
+	-- {
+	-- 	key = "l",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "l"),
+	-- },
 
 	--open nvim select text
 	-- {
@@ -109,28 +109,28 @@ config.keys = {
 	-- 	mods = "CMD",
 	-- 	action = act.SendString("\x14u"),
 	-- },
-	{
-		key = "Backslash",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "v"),
-	},
+	-- {
+	-- 	key = "Backslash",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "v"),
+	-- },
 	-- {
 	-- 	key = "s",
 	-- 	mods = "CMD",
 	-- 	action = act.SendString(tmuxLeaderKey .. "s"),
 	-- },
+	-- {
+	-- 	key = "o",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "f"),
+	-- },
+	--
+	-- {
+	-- 	key = "m",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(tmuxLeaderKey .. "m"),
+	-- },
 
-	{
-		key = "o",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "f"),
-	},
-
-	{
-		key = "m",
-		mods = "CMD",
-		action = act.SendString(tmuxLeaderKey .. "m"),
-	},
 	{
 		key = "e",
 		mods = "CMD",
@@ -138,51 +138,51 @@ config.keys = {
 	},
 
 	-- nvim Command
-	{
-		key = "1",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "1"),
-	},
-	{
-		key = "2",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "2"),
-	},
-	{
-		key = "3",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "3"),
-	},
-	{
-		key = "4",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "4"),
-	},
-	{
-		key = "5",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "5"),
-	},
-	{
-		key = "6",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "6"),
-	},
-	{
-		key = "7",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "7"),
-	},
-	{
-		key = "8",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "8"),
-	},
-	{
-		key = "9",
-		mods = "CMD",
-		action = act.SendString(combineKey .. "9"),
-	},
+	-- {
+	-- 	key = "1",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "1"),
+	-- },
+	-- {
+	-- 	key = "2",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "2"),
+	-- },
+	-- {
+	-- 	key = "3",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "3"),
+	-- },
+	-- {
+	-- 	key = "4",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "4"),
+	-- },
+	-- {
+	-- 	key = "5",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "5"),
+	-- },
+	-- {
+	-- 	key = "6",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "6"),
+	-- },
+	-- {
+	-- 	key = "7",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "7"),
+	-- },
+	-- {
+	-- 	key = "8",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "8"),
+	-- },
+	-- {
+	-- 	key = "9",
+	-- 	mods = "CMD",
+	-- 	action = act.SendString(combineKey .. "9"),
+	-- },
 
 	-- nvim editor
 	{
@@ -233,7 +233,7 @@ config.keys = {
 	{
 		key = "w",
 		mods = "CMD",
-		action = act.SendString(combineKey .. "bD"),
+		action = act.SendString(combineKey .. "bd"),
 	},
 	{
 		key = "b",
