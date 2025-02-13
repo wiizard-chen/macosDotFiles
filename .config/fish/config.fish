@@ -130,11 +130,11 @@ alias zr="za ; zl"
 alias lg='lazygit'
 
 
-if type -q exa
-    alias ll "exa -l -g --icons"
-    alias lla "ll -a"
-    alias ls exa
-end
+# if type -q eza
+#     alias ll "eza -l -g --icons"
+#     alias lla "ll -a"
+#     alias ls eza
+# end
 
 if type -q eza
     alias ll "eza -l -g --icons"
@@ -169,3 +169,7 @@ command clear
 if [ -f '/Users/wiizard/Downloads/google-cloud-sdk/path.fish.inc' ]
     . '/Users/wiizard/Downloads/google-cloud-sdk/path.fish.inc'
 end
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/wiizardchen/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
